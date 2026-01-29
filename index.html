@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio | Problem Solver</title>
+    <!-- Architecture & UI Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Tech Stack Icons -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Ambient Background Animation -->
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="container nav-container">
+            <a href="#home" class="logo"><span></span></a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="ri-sun-line" id="theme-icon"></i>
+                </button>
+                <div class="theme-menu glass-panel hidden" id="theme-menu">
+                    <button data-set-theme="light"><i class="ri-sun-line"></i> Light</button>
+                    <button data-set-theme="dark"><i class="ri-moon-line"></i> Dark</button>
+                    <button data-set-theme="system"><i class="ri-computer-line"></i> System</button>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="ri-menu-4-line"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home / Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text-area" data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="subtitle">Hello, I'm</h2>
+                <h1 class="title">Muhammad Asif</h1>
+                <h2 style="font-size: 1.8rem; margin-bottom: 25px; font-weight: 600;">I am a <span id="typewriter" style="color: var(--primary-color);"></span><span class="cursor">|</span></h2>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                    specializing in Machine Learning, Data Analytics, and turning complex data into business solutions. 
+                    I am highly passionate about <span class="highlight">contributing to Open Source projects</span> and building scalable AI models.
+                </p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                    <a href="#skills" class="btn btn-secondary">My Skills</a>
+                </div>
+            </div>
+            <div class="hero-image-area" data-aos="fade-left" data-aos-duration="1000">
+                <!-- Professional Theme-Based Image -->
+                <div class="profile-card glass-panel" style="padding: 0; overflow: hidden; border: none;">
+                   <div class="profile-img-wrapper">
+                        <!-- Colorful Image for Light Theme -->
+                        <img src="assets/images/image1.png" class="theme-img light-img" alt="Muhammad Asif">
+                        <!-- Black & White Image for Dark Theme -->
+                        <img src="assets/images/image.png" class="theme-img dark-img" alt="Muhammad Asif">
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="about-text">
+                    <p>
+                        I am a dedicated student with a strong foundation in Data Science and Machine Learning. 
+                        My journey involves solving real-world problems using data-driven insights. 
+                        I build predictive models, analyze trends, and visualize data to help businesses make informed decisions.
+                    </p>
+                    <p>
+                        Currently, I am looking to expand my horizons by contributing to impactful open-source projects 
+                        and collaborating with like-minded developers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding skills-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Skills & Tools</h2>
+            <p class="section-desc" data-aos="fade-up" data-aos-delay="100">My technical toolkit for Data Science, ML, and Analytics.</p>
+            
+            <div class="skills-grid">
+                <!-- Languages & Core -->
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="devicon-python-plain colored"></i>
+                    <span>Python</span>
+                    <div class="skill-popup">
+                        <h4>Python</h4>
+                        <p>A versatile language for Data Science, ML, and automation.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="devicon-cplusplus-plain colored"></i>
+                    <span>C++</span>
+                    <div class="skill-popup">
+                        <h4>C++</h4>
+                        <p>High-performance programming for systems and optimized algorithms.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="devicon-r-plain colored"></i>
+                    <span>R</span>
+                    <div class="skill-popup">
+                        <h4>R</h4>
+                        <p>Statistical computing and graphics for data analysis.</p>
+                    </div>
+                </div>
+                
+                <!-- Libraries -->
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="250">
+                    <i class="devicon-numpy-plain colored"></i>
+                    <span>NumPy</span>
+                    <div class="skill-popup">
+                        <h4>NumPy</h4>
+                        <p>Fundamental package for scientific computing with Python.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="devicon-pandas-plain colored"></i>
+                    <span>Pandas</span>
+                    <div class="skill-popup">
+                        <h4>Pandas</h4>
+                        <p>Fast, flexible, and expressive data structures for data manipulation.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="350">
+                    <i class="devicon-matplotlib-plain colored"></i>
+                    <span>Matplotlib</span>
+                    <div class="skill-popup">
+                        <h4>Matplotlib</h4>
+                        <p>Comprehensive library for creating static, animated, and interactive visualizations.</p>
+                    </div>
+                </div>
+
+                <!-- Tools & Viz -->
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="400">
+                    <!-- Devicon doesn't have PowerBI, using a chart icon fallback or closest match -->
+                    <i class="ri-bar-chart-groupped-fill colored-custom"></i>
+                    <span>Power BI</span>
+                    <div class="skill-popup">
+                        <h4>Power BI</h4>
+                        <p>Interactive data visualization and business intelligence tool.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="450">
+                     <i class="ri-file-excel-2-fill colored-custom"></i>
+                    <span>Excel</span>
+                    <div class="skill-popup">
+                        <h4>Excel</h4>
+                        <p>Powerful spreadsheet tool for data organization and analysis.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="ri-pie-chart-2-fill colored-custom"></i>
+                    <span>Tableau</span>
+                     <div class="skill-popup">
+                        <h4>Tableau</h4>
+                        <p>Visual analytics platform transforming the way we use data to solve problems.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="550">
+                    <i class="devicon-streamlit-plain colored"></i>
+                    <span>Streamlit</span>
+                    <div class="skill-popup">
+                        <h4>Streamlit</h4>
+                        <p>Turn data scripts into shareable web apps in minutes.</p>
+                    </div>
+                </div>
+
+                <!-- DevOps & IDEs -->
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="600">
+                    <i class="devicon-jupyter-plain colored"></i>
+                    <span>Jupyter</span>
+                     <div class="skill-popup">
+                        <h4>Jupyter</h4>
+                        <p>Interactive computing environment for creating and sharing documents.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="650">
+                    <i class="devicon-git-plain colored"></i>
+                    <span>Git</span>
+                    <div class="skill-popup">
+                        <h4>Git</h4>
+                        <p>Distributed version control system for tracking changes in source code.</p>
+                    </div>
+                </div>
+                 <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="700">
+                    <i class="devicon-github-original colored"></i>
+                    <span>GitHub</span>
+                    <div class="skill-popup">
+                        <h4>GitHub</h4>
+                        <p>Platform for hosting and reviewing code, managing projects, and building software.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="750">
+                    <i class="devicon-pycharm-plain colored"></i>
+                    <span>PyCharm</span>
+                    <div class="skill-popup">
+                        <h4>PyCharm</h4>
+                        <p>Professional IDE for Python developers.</p>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="800">
+                    <i class="devicon-vscode-plain colored"></i>
+                    <span>VS Code</span>
+                    <div class="skill-popup">
+                        <h4>VS Code</h4>
+                        <p>Code editor redefined and optimized for building and debugging modern web and cloud applications.</p>
+                    </div>
+                </div>
+                 <div class="skill-card glass-panel" data-aos="zoom-in" data-aos-delay="850">
+                    <i class="devicon-anaconda-original colored"></i>
+                    <span>Anaconda</span>
+                     <div class="skill-popup">
+                        <h4>Anaconda</h4>
+                        <p>The world's most popular open-source Python distribution platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding bg-alt">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Latest Tutorials & Blogs</h2>
+            <div class="blog-grid">
+                <!-- Blog Post 1: Business -->
+                <article class="blog-card glass-panel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-content">
+                        <span class="blog-tag">Business</span>
+                        <span class="blog-date">Jan 10, 2026</span>
+                        <h3 class="blog-title">Data-Driven Business Growth</h3>
+                        <p>Learn how leveraging AI and data analytics can transform decision-making processes and boost ROI in modern startups.</p>
+                        <a href="https://www.tableau.com/learn/articles/data-driven-decision-making" target="_blank" class="read-more">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2: Language Tutorial -->
+                <article class="blog-card glass-panel" data-aos="fade-up" data-aos-delay="400">
+                    <div class="blog-content">
+                        <span class="blog-tag">Tutorial</span>
+                        <span class="blog-date">Jan 15, 2026</span>
+                        <h3 class="blog-title">Mastering Python for Data Science</h3>
+                        <p>A comprehensive guide starting from variables to advanced libraries like Pandas and NumPy for absolute beginners.</p>
+                        <a href="https://docs.python.org/3/tutorial/index.html" target="_blank" class="read-more">Start Learning <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3: Git Tutorial -->
+                <article class="blog-card glass-panel" data-aos="fade-up" data-aos-delay="600">
+                    <div class="blog-content">
+                        <span class="blog-tag">DevOps</span>
+                        <span class="blog-date">Jan 20, 2026</span>
+                        <h3 class="blog-title">Git & GitHub Essential Commands</h3>
+                        <p>Understand the workflow of version control: Commit, Push, Pull, and managing merge conflicts like a pro.</p>
+                        <a href="https://git-scm.com/doc" target="_blank" class="read-more">View Guide <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4: Machine Learning -->
+                <article class="blog-card glass-panel" data-aos="fade-up" data-aos-delay="700">
+                    <div class="blog-content">
+                        <span class="blog-tag">Machine Learning</span>
+                        <span class="blog-date">Feb 02, 2026</span>
+                        <h3 class="blog-title">Building Your First Neural Network</h3>
+                        <p>A beginner-friendly introduction to Deep Learning. We'll build a simple classifier using PyTorch/TensorFlow.</p>
+                        <a href="https://www.tensorflow.org/tutorials" target="_blank" class="read-more">Read Tutorial <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5: Data Visualization -->
+                <article class="blog-card glass-panel" data-aos="fade-up" data-aos-delay="800">
+                    <div class="blog-content">
+                        <span class="blog-tag">Data Viz</span>
+                        <span class="blog-date">Feb 12, 2026</span>
+                        <h3 class="blog-title">Visualizing Trends with Matplotlib</h3>
+                        <p>Turn raw CSV data into meaningful insights. Learn how to create impact-driven dashboards and reports.</p>
+                        <a href="https://matplotlib.org/stable/tutorials/index.html" target="_blank" class="read-more">See Examples <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6: Career -->
+                <article class="blog-card glass-panel" data-aos="fade-up" data-aos-delay="900">
+                    <div class="blog-content">
+                        <span class="blog-tag">Career</span>
+                        <span class="blog-date">Feb 18, 2026</span>
+                        <h3 class="blog-title">Open Source: A Student's Guide</h3>
+                        <p>Why contributing to open source projects is the best way to learn, network, and land your first job in tech.</p>
+                        <a href="https://opensource.guide/how-to-contribute/" target="_blank" class="read-more">Read Story <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container contact-wrapper">
+            <div class="contact-info" data-aos="fade-right">
+                <h2 class="section-title-left">Get In Touch</h2>
+                <p>Feel free to reach out for collaborations, freelance work, or just a coffee chat.</p>
+                
+                <div class="contact-item">
+                    <div class="icon-box"><i class="ri-mail-send-line"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:student@university.edu">student@university.edu</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-box"><i class="ri-map-pin-line"></i></div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Pakistan</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form glass-panel" data-aos="fade-left">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Your message..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026. Built with <i class="ri-heart-fill"></i> and Code.</p>
+            <div class="social-links">
+                <a href="https://github.com/muhammad-asif10" target="_blank" rel="noopener noreferrer"><i class="ri-github-fill"></i></a>
+                <a href="https://linkedin.com/in/muhammad-asif10" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a>
+                <a href="https://x.com/m_asifx18" target="_blank" rel="noopener noreferrer"><i class="ri-twitter-x-fill"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Popup -->
+    <div id="notification-popup" class="notification-popup glass-panel">
+        <div class="notification-content">
+            <div class="notification-icon">
+                <i class="ri-checkbox-circle-fill" id="notification-icon-symbol"></i>
+            </div>
+            <div class="notification-text">
+                <h4 id="notification-title">Success!</h4>
+                <p id="notification-message">Your message has been sent successfully.</p>
+            </div>
+            <button class="notification-close" id="notification-close">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <div class="notification-progress"></div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120, 
+        delay: 0, 
+        duration: 800, 
+        easing: 'ease', 
+        once: true, 
+        mirror: false, 
+        anchorPlacement: 'top-bottom', 
+      });
+    </script>
+</body>
+</html>
