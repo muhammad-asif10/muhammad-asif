@@ -2,6 +2,13 @@
 
 ![Portfolio Preview](assets/preview.png)
 
+</p>
+<p align="center">
+  <a href="https://muhammad-asif10.github.io/muhammad-asif/" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/My%20Portfolio-Visit%20Now-blueviolet?style=for-the-badge&logo=vercel&logoColor=white" alt="Visit My Portfolio"/>
+  </a>
+  
+</p>
 A professional, responsive, and interactive portfolio website designed for a Data Scientist, Machine Learning Engineer, and Open Source Contributor. This project features a modern Glassmorphism UI, a working contact form, and dynamic theme switching with personalized imagery.
 
 ##  Features
