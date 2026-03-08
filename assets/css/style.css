@@ -210,6 +210,7 @@ nav {
     font-weight: 500;
     color: var(--text-color);
     position: relative;
+    transition: color 0.3s ease;
 }
 
 .nav-links a::after {
@@ -341,6 +342,14 @@ nav {
     max-width: 500px;
 }
 
+.hero-tagline {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+}
+
 .hero-description .highlight {
     color: var(--primary-color);
     font-weight: 500;
@@ -370,6 +379,11 @@ nav {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
 .btn-secondary {
     border: 2px solid var(--glass-border);
     backdrop-filter: blur(5px); /* Just in case */
@@ -379,6 +393,7 @@ nav {
 .btn-secondary:hover {
     border-color: var(--primary-color);
     color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .hero-image-area {
@@ -410,6 +425,12 @@ nav {
     position: relative;
     box-shadow: none; /* Remove shadow to let image shine */
     border: none; /* Remove border if using full image */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 /* Image Wrapper */
@@ -477,7 +498,7 @@ nav {
    6. Sections
    ========================================= */
 .section-padding {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .bg-alt {
@@ -489,6 +510,15 @@ nav {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.section-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 0 auto 50px;
+    border-radius: 2px;
 }
 
 .section-title-left {
@@ -522,7 +552,7 @@ nav {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .skill-card {
@@ -632,7 +662,7 @@ nav {
 
 .blog-card {
     padding: 30px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     height: 100%;
 }
 
@@ -713,6 +743,12 @@ nav {
     justify-content: center;
     color: var(--primary-color);
     font-size: 1.2rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-item:hover .icon-box {
+    background: rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 .contact-form {
@@ -733,19 +769,20 @@ nav {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 14px 18px;
     border-radius: 8px;
     border: 1px solid var(--glass-border);
     background: rgba(255,255,255,0.05); /* very subtle fill */
     color: var(--text-color);
     font-family: inherit;
     outline: none;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
 .full-width {
@@ -758,7 +795,7 @@ nav {
    ========================================= */
 footer {
     border-top: 1px solid var(--glass-border);
-    padding: 30px 0;
+    padding: 50px 0;
     margin-top: 50px;
     text-align: center;
 }
@@ -778,10 +815,12 @@ footer {
 .social-links a {
     font-size: 1.5rem;
     color: var(--text-light);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
     color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 /* =========================================
@@ -846,22 +885,6 @@ footer {
     .title {
         font-size: 2.5rem;
     }
-}
-
-/* =========================================
-   Typewriter Effect
-   ========================================= */
-.cursor {
-    display: inline-block;
-    width: 3px;
-    background-color: var(--text-color);
-    animation: blink 1s infinite;
-    margin-left: 5px;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
 }
 
 /* =========================================
